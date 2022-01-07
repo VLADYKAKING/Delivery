@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <title>Delivery</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="containerOuter header">
+            <div class="left space-around">
+                <span><a href="/Food/List"><img src="/img/icons/menu.png" alt="icon" class="mini"> Меню</a></span>
+                <span><a href="/Food/List/sushi"><img src="/img/icons/sushi.png" alt="icon" class="mini"> Суши</a></span>
+                <span><a href="/Food/List/pizza"><img src="/img/icons/pizza.png" alt="icon" class="mini"> Пицца</a></span>
+                <span><a href="/Food/List/meat"><img src="/img/icons/meat.png" alt="icon" class="mini"> Мясо</a></span>
+            </div>
+            <div class="middle center">
+                <a href="/"><img src="/img/logo.jpg" alt="LOGO" class="logo"></a>
+            </div>
+            <div class="right space-around">
+                <div class="infoGroup space-between">
+                    <span><a href="/AboutUs/">About Us</a></span>
+                    <span><a href="/Contacts/">Contacts</a></span>
+                    <span><a href="https://goo.gl/maps/UuqVUdL27pweEN8P6">Reviews</a></span>
+                </div>
+                <span><a href="/Cart/"><img src="/img/icons/cart.png" alt="icon" class="mini"> Cart</a></span>
+            </div>
+        </header>
+        <div class="containerOuter content">
+            @RenderBody()
+        </div>
+        <footer class="containerOuter">
+            <div class="footer center">
+                <span>Курсовая работа | Кислов Влад ЕПИ 2-19 | Бишкек 2021</span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

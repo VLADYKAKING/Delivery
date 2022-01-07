@@ -1,0 +1,16 @@
+﻿@model CartViewModel
+<div class="">
+    <div class="cart_items">
+        @foreach (var el in Model.cart.listItems)
+        {
+            <div class="alert alert-warning mt-3">
+                <b>Блюдо: </b>@el.food.name<br/>
+                <b>Цена: </b>@el.food.price.ToString("c")<br/>
+            </div>
+        }
+        <hr />
+        <a class="btn btn-danger" asp-controller="Order" asp-action="Form">Оплатить @Model.summ.ToString("c")</a>
+        <a class="btn btn-warning" asp-controller="Cart" asp-action="deleteFromCart">Очистить корзину</a>
+        <a class="btn btn-success" href="/Food/List">Назад к меню</a>
+    </div>
+</div>

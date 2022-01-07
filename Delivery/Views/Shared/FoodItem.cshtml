@@ -1,0 +1,11 @@
+﻿@model Food
+
+<div class="col-lg-4">
+    <div class="item-wrapper">
+        <img class="img-wrapper" src="@Model.img" alt="@Model.name"/>
+        <h2 class="title">@Model.name</h2>
+        <p>@Model.desc</p>
+        <p>Цена: @Model.price.ToString("c")</p>
+        <p><a class="btn btn-warning" asp-controller="Cart" asp-action="addToCart" asp-route-id="@Model.id">Добавить в корзину</a></p>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+﻿@model FoodListViewModel
+<h2>@Model.currentCategory</h2>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Food food in Model.allFood)
+        {
+            @await Html.PartialAsync("FoodItem",food)
+        }
+    }
+</div>
